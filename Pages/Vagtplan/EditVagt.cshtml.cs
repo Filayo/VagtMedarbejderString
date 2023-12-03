@@ -48,7 +48,7 @@ namespace MedarbejderVagtKaos.Pages.Vagtplan
 				return Page();
 			}
 
-			_vagtService.UpdateVagt(Vagt);
+			//_vagtService.UpdateVagt(Vagt);
 			return RedirectToPage("GetAllVagter");
 		}
 	}

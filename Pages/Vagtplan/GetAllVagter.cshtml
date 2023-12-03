@@ -26,15 +26,16 @@
 			{
 				<tr>
 					<td>
-						@if (vagt != null)
+						@if (vagt != null && vagt.AssignedMedarbejder != null)
 						{
-							<span>@vagt.MedarbejderName</span>
+							<span>@vagt.AssignedMedarbejder.MedarbejderName</span>
 							<br />
-							<span>Email: @vagt.MedarbejderEmail</span>
+							<span>Email: @vagt.AssignedMedarbejder.MedarbejderEmail</span>
 							<br />
-							<span>Tlf: @vagt.MedarbejderTlf</span>
+							<span>Tlf: @vagt.AssignedMedarbejder.MedarbejderTlf</span>
 						}
 					</td>
+
 					<td>@vagt.StartTid</td>
 					<td>@vagt.SlutTid</td>
 					<td>

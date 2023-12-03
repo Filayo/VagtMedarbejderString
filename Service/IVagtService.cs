@@ -6,7 +6,7 @@ namespace MedarbejderVagtKaos.Service
 	{
 		List<Vagt> GetVagter();
 		void AddVagt(Vagt vagt);
-		void UpdateVagt(Vagt vagt);
+		//void UpdateVagt(Vagt vagt);
 		Vagt GetVagt(int id);
 		Vagt DeleteVagt(int? vagtId);
 	}

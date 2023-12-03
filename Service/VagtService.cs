@@ -28,21 +28,21 @@ namespace MedarbejderVagtKaos.Service
 
 			return null;
 		}
-		public void UpdateVagt(Vagt vagt)
-		{
-			if (vagt != null)
-			{
-				foreach (Vagt i in _vagter)
-				{
-					if (i.Id == i.Id)
-					{
-						i.MedarbejderName = vagt.MedarbejderName;
-						i.StartTid = vagt.StartTid;
-						i.SlutTid = vagt.SlutTid;
-					}
-				}
-			}
-		}
+		//public void UpdateVagt(Vagt vagt)
+		//{
+		//	if (vagt != null)
+		//	{
+		//		foreach (Vagt i in _vagter)
+		//		{
+		//			if (i.Id == i.Id)
+		//			{
+		//				i.MedarbejderName = vagt.MedarbejderName;
+		//				i.StartTid = vagt.StartTid;
+		//				i.SlutTid = vagt.SlutTid;
+		//			}
+		//		}
+		//	}
+		//}
 
 		public Vagt DeleteVagt(int? vagtId)
 		{
