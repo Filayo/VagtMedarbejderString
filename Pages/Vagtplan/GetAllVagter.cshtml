@@ -1,0 +1,55 @@
+﻿@page
+@model MedarbejderVagtKaos.Pages.Vagtplan.GetAllVagterModel
+@{
+}
+
+<h1> Vagtplan</h1>
+
+<table class="table table-bordered table-hover table-striped">
+	<thead>
+		<tr>
+			<th>
+				Medarbejder
+			</th>
+			<th>
+				Start tid
+			</th>
+			<th>
+				Slut tid :)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@if (Model.Vagter != null)
+		{
+			foreach (var vagt in Model.Vagter)
+			{
+				<tr>
+					<td>
+						@if (vagt != null)
+						{
+							<span>@vagt.MedarbejderName</span>
+							<br />
+							<span>Email: @vagt.MedarbejderEmail</span>
+							<br />
+							<span>Tlf: @vagt.MedarbejderTlf</span>
+						}
+					</td>
+					<td>@vagt.StartTid</td>
+					<td>@vagt.SlutTid</td>
+					<td>
+						<a class="btn btn-danger btn-sm " type="button" title="Delete" asp-page="DeleteVagt" asp-route-id="@vagt.Id"><i class="bi bi-trash3-fill"></i></a>
+					</td>
+					<td>
+						<a class="btn btn-primary btn-sm" type="button" title="Edit" asp-page="EditItem" asp-route-id="@vagt.Id"><i class="bi bi-pencil-square"></i></a>
+					</td>
+						
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<p>
+	<a class="btn btn-primary" asp-page="CreateVagt">Tilføj en ny vagt</a>
+</p>

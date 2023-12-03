@@ -1,0 +1,13 @@
+﻿@page
+@model MedarbejderVagtKaos.Pages.Vagtplan.DeleteVagtModel
+@{
+}
+
+<h1>Delete Confirmation</h1>
+<div class="alert alert-danger">
+	<h5>Er du sikker du vil slette @Model.Vagt.MedarbejderName vagt?</h5>
+	<form method="post">
+		<button type="submit" class="btn btn-danger">Yes</button>
+		<a class="btn btn-primary" asp-page="/Vagtplan/GetAllVagter">No</a>
+	</form>
+</div>
